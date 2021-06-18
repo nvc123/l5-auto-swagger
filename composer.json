@@ -1,0 +1,38 @@
+{
+  "name": "nvc/l5-auto-swagger",
+  "description": "Additional annotations for for l5-swagger",
+  "keywords": [
+    "laravel",
+    "swagger",
+    "api"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "nvc",
+      "email": "agndev3@gmail.com"
+    }
+  ],
+  "require": {
+    "darkaonline/l5-swagger": "^6.0",
+    "doctrine/annotations": "*",
+    "zircote/swagger-php": "2.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "8.*",
+    "mockery/mockery": "1.*",
+    "orchestra/testbench": "4.*",
+    "php-coveralls/php-coveralls": "^2.0"
+  },
+  "suggest": {
+    "zircote/swagger-php:~2.0": "!!! Require Swagger-PHP ~2.0 for @SWG annotations support !!!"
+  },
+  "autoload": {
+    "psr-4": {
+      "AutoSwagger\\SWG\\": "src",
+      "Swagger\\": "src"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
