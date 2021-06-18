@@ -18,12 +18,6 @@
     "doctrine/annotations": "*",
     "zircote/swagger-php": "2.*"
   },
-  "require-dev": {
-    "phpunit/phpunit": "8.*",
-    "mockery/mockery": "1.*",
-    "orchestra/testbench": "4.*",
-    "php-coveralls/php-coveralls": "^2.0"
-  },
   "suggest": {
     "zircote/swagger-php:~2.0": "!!! Require Swagger-PHP ~2.0 for @SWG annotations support !!!"
   },
