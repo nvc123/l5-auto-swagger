@@ -6,6 +6,7 @@ namespace AutoSwagger\SWG\Annotations;
 use AutoSwagger\SWG\Annotations\Mapping\AbstractNotField;
 use AutoSwagger\SWG\Annotations\Mapping\Field;
 use Doctrine\Common\Annotations\Reader;
+use Doctrine\Common\Annotations\AnnotationReader;
 use Illuminate\Support\Str;
 use Swagger\Annotations\AbstractAnnotation;
 
@@ -64,7 +65,7 @@ abstract class AbstractDtoAnnotation extends AbstractAnnotation
      */
     protected function generateAnnotationsByReflectionClass(\ReflectionClass $reflectionClass){
         /** @var Reader $annotationReader */
-        $annotationReader = app(Reader::class);
+        $annotationReader = app(AnnotationReader::class);
         $result = [];
 
         /** @var \ReflectionProperty $reflectionProperty */

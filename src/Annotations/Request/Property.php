@@ -28,7 +28,7 @@ class Property extends AbstractDtoAnnotation
         $properties = [
             'property' => $data->name,
             'description' => $data->description,
-            'nullable' => !$data->required
+            'required' => [$data->required ? 'true' : 'false']
         ];
 
         $type = 'string';
