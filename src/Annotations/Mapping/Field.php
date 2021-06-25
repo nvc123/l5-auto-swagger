@@ -49,30 +49,36 @@ class Field
      */
     public function fillEmptyData(\ReflectionProperty $reflectionProperty)
     {
-        if (empty($this->name)){
+        if (empty($this->name)) {
             $this->name = $reflectionProperty->getName();
         }
 
-        if (empty($this->type)){
+        if (empty($this->type)) {
             $this->required = true;
-            $type = $reflectionProperty->getType();
-            if ($type){
+
+            if (method_exists($reflectionProperty, 'getType')) {
+                $type = $reflectionProperty->getType();
+            } else {
+                $type = null;
+            }
+
+            if ($type) {
                 $this->type = $type->getName();
-            }else{
+            } else {
                 $doc = $reflectionProperty->getDocComment();
                 $type = 'string';
-                if (Str::contains($doc, '@var ')){
+                if (Str::contains($doc, '@var ')) {
                     $type = Str::after($doc, '@var ');
                     $type = Str::before($type, "\n");
                     $type = Str::before($type, "\r");
 
                     $types = explode('|', $type);
-                    if (count($types) === 1){
+                    if (count($types) === 1) {
                         $type = $types[0];
-                    }else{
+                    } else {
                         $isString = true;
-                        foreach ($types as $typeItem){
-                            switch ($typeItem){
+                        foreach ($types as $typeItem) {
+                            switch ($typeItem) {
                                 case 'string':
                                     $isString = true;
                                     break;
@@ -98,14 +104,14 @@ class Field
                                     break;
                                 default:
                                     $type = $typeItem;
-                                    if (strtolower($type) !== $type || Str::contains($type, '[]')){
+                                    if (strtolower($type) !== $type || Str::contains($type, '[]')) {
                                         $isString = false;
                                     }
                                     break;
                             }
                         }
 
-                        if ($isString){
+                        if ($isString) {
                             $type = 'string';
                         }
                     }
