@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Swagger\Annotations\Request;
+namespace OpenApi\Annotations\Request;
 
 
 use AutoSwagger\SWG\Annotations\AbstractDtoAnnotation;
-use Swagger\Annotations\AbstractAnnotation;
-use Swagger\Annotations\Schema;
+use OpenApi\Annotations\AbstractAnnotation;
+use OpenApi\Annotations\Schema;
 
 /**
  * @Annotation
@@ -28,7 +28,7 @@ class Response extends AbstractDtoAnnotation
      */
     public function generateAnnotation($data)
     {
-        return new \Swagger\Annotations\Response([
+        return new \OpenApi\Annotations\Response([
             'response' => $this->code,
             'description' => $data,
             'value' => [new Schema([
