@@ -1,13 +1,13 @@
 <?php
 
 
-namespace Swagger\Annotations\Request;
+namespace OpenApi\Annotations\Request;
 
 
 use AutoSwagger\SWG\Annotations\AbstractDtoAnnotation;
-use Swagger\Annotations\AbstractAnnotation;
-use Swagger\Annotations\Items;
-use Swagger\Annotations\Schema;
+use OpenApi\Annotations\AbstractAnnotation;
+use OpenApi\Annotations\Items;
+use OpenApi\Annotations\Schema;
 
 /**
  * @Annotation
