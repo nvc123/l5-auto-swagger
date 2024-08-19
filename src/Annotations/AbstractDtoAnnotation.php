@@ -8,7 +8,7 @@ use AutoSwagger\SWG\Annotations\Mapping\Field;
 use Doctrine\Common\Annotations\Reader;
 use Doctrine\Common\Annotations\AnnotationReader;
 use Illuminate\Support\Str;
-use Swagger\Annotations\AbstractAnnotation;
+use OpenApi\Annotations\AbstractAnnotation;
 
 /**
  * @Annotation
