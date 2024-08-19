@@ -29,7 +29,7 @@ class ArrayResponse extends AbstractDtoAnnotation
      */
     public function generateAnnotation($data)
     {
-        return new \Swagger\Annotations\Response([
+        return new \OpenApi\Annotations\Response([
             'response' => $this->code,
             'description' => $data,
             'value' => [new Schema([
