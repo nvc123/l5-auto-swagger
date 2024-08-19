@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Swagger\Annotations\Methods;
+namespace OpenApi\Annotations\Methods;
 
 /**
  * @Annotation
  */
-class Put extends \Swagger\Annotations\Put
+class Put extends \OpenApi\Annotations\Put
 {
     use Method;
 
