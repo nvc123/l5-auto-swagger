@@ -1,16 +1,16 @@
 <?php
 
 
-namespace Swagger\Annotations\Request;
+namespace OpenApi\Annotations\Request;
 
 use AutoSwagger\SWG\Annotations\AbstractDtoAnnotation;
 use AutoSwagger\SWG\Annotations\Mapping\Field;
 use AutoSwagger\SWG\Reflection\ReflectionClass;
 use Illuminate\Support\Str;
-use Swagger\Annotations\AbstractAnnotation;
-use Swagger\Annotations\Items;
-use Swagger\Annotations\Parameter;
-use Swagger\Annotations\Schema;
+use OpenApi\Annotations\AbstractAnnotation;
+use OpenApi\Annotations\Items;
+use OpenApi\Annotations\Parameter;
+use OpenApi\Annotations\Schema;
 
 
 /**
@@ -76,6 +76,6 @@ class Property extends AbstractDtoAnnotation
 
         $properties['type'] = $type;
 
-        return new \Swagger\Annotations\Property($properties);
+        return new \OpenApi\Annotations\Property($properties);
     }
 }
