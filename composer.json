@@ -16,7 +16,7 @@
   "require": {
     "darkaonline/l5-swagger": "^6.0",
     "doctrine/annotations": "*",
-    "laravel/framework": "~6.5.0",
+    "laravel/framework": ">=6.5.0",
     "zircote/swagger-php": "2.*"
   },
   "suggest": {
