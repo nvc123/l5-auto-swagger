@@ -1,14 +1,14 @@
 <?php
 
 
-namespace Swagger\Annotations\Methods;
+namespace OpenApi\Annotations\Methods;
 
 
 use AutoSwagger\SWG\Annotations\AbstractDtoAnnotation;
 use AutoSwagger\SWG\HasMethodAnnotations;
-use Swagger\Annotations\Operation;
-use Swagger\Annotations\Parameter;
-use Swagger\Annotations\Path;
+use OpenApi\Annotations\Operation;
+use OpenApi\Annotations\Parameter;
+use OpenApi\Annotations\Path;
 
 
 trait Method
@@ -27,9 +27,9 @@ trait Method
     public static $hasBeenCreated = false;
 
     /**
-     * @param \Swagger\Annotations\AbstractAnnotation[] $annotations
+     * @param \OpenApi\Annotations\AbstractAnnotation[] $annotations
      * @param bool $ignore
-     * @return \Swagger\Annotations\AbstractAnnotation[]
+     * @return \OpenApi\Annotations\AbstractAnnotation[]
      */
     public function merge($annotations, $ignore = false)
     {
