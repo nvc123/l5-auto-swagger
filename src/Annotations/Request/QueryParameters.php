@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Swagger\Annotations\Request;
+namespace OpenApi\Annotations\Request;
 
 
 /**
