@@ -14,18 +14,13 @@
     }
   ],
   "require": {
-    "darkaonline/l5-swagger": ">=6.0",
+    "darkaonline/l5-swagger": ">=8.6.1",
     "doctrine/annotations": "*",
-    "laravel/framework": ">=6.5.0",
-    "zircote/swagger-php": "2.*"
-  },
-  "suggest": {
-    "zircote/swagger-php:~2.0": "!!! Require Swagger-PHP ~2.0 for @SWG annotations support !!!"
   },
   "autoload": {
     "psr-4": {
       "AutoSwagger\\SWG\\": "src",
-      "Swagger\\": "src"
+      "OpenApi\\": "src"
     }
   },
   "minimum-stability": "dev",
