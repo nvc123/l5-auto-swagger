@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Swagger\Annotations\Request;
+namespace OpenApi\Annotations\Request;
 
 use AutoSwagger\SWG\Annotations\AbstractDtoAnnotation;
-use Swagger\Annotations\AbstractAnnotation;
-use Swagger\Annotations\Parameter;
-use Swagger\Annotations\Schema;
+use OpenApi\Annotations\AbstractAnnotation;
+use OpenApi\Annotations\Parameter;
+use OpenApi\Annotations\Schema;
 
 
 /**
