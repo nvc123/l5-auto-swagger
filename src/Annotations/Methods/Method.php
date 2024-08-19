@@ -15,13 +15,6 @@ trait Method
 {
 
     /**
-     * @inheritdoc
-     */
-    public static $_parents = [
-        Path::class
-    ];
-
-    /**
      * @var bool
      */
     public static $hasBeenCreated = false;
@@ -31,7 +24,7 @@ trait Method
      * @param bool $ignore
      * @return \OpenApi\Annotations\AbstractAnnotation[]
      */
-    public function merge($annotations, $ignore = false)
+    public function merge($annotations, $ignore = false): array
     {
         if (Method::$hasBeenCreated){
             return [];
@@ -63,6 +56,11 @@ trait Method
         $result = parent::merge($resultAnnotations, $ignore);
 
         return $result;
+    }
+
+    public function getRoot(): string
+    {
+        return get_parent_class($this);
     }
 
 }
