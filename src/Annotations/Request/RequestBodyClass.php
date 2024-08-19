@@ -5,7 +5,8 @@ namespace OpenApi\Annotations\Request;
 
 use AutoSwagger\SWG\Annotations\AbstractDtoAnnotation;
 use OpenApi\Annotations\AbstractAnnotation;
-use OpenApi\Annotations\Parameter;
+use OpenApi\Annotations\MediaType;
+use OpenApi\Annotations\RequestBody;
 use OpenApi\Annotations\Schema;
 
 
@@ -21,14 +22,14 @@ class RequestBodyClass extends AbstractDtoAnnotation
      */
     public function generateAnnotation($data)
     {
-        return new Parameter([
-            'name' => 'body',
-            'in' => 'body',
-            'required' => true,
-            'description' => $data,
-            'value' => [new Schema([
-                'type' => 'object',
-                'value' => (new Property(['value' => $data]))->generateAnnotations()
+        return new RequestBody([
+            'value' => [new MediaType([
+                'mediaType' => 'application/json',
+                'value' => [new Schema([
+                    'type' => 'object',
+                    'description' => $data,
+                    'value' => (new Property(['value' => $data]))->generateAnnotations()
+                ])]
             ])]
         ]);
     }
