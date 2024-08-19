@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Swagger\Annotations\Methods;
+namespace OpenApi\Annotations\Methods;
 
 /**
  * @Annotation
  */
-class Get extends \Swagger\Annotations\Get
+class Get extends \OpenApi\Annotations\Get
 {
     use Method;
 
