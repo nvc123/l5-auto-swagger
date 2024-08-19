@@ -15,7 +15,7 @@
   ],
   "require": {
     "darkaonline/l5-swagger": ">=8.6.1",
-    "doctrine/annotations": "*",
+    "doctrine/annotations": "*"
   },
   "autoload": {
     "psr-4": {
