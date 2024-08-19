@@ -6,6 +6,8 @@ namespace OpenApi\Annotations\Request;
 
 use AutoSwagger\SWG\Annotations\AbstractDtoAnnotation;
 use OpenApi\Annotations\AbstractAnnotation;
+use OpenApi\Annotations\JsonContent;
+use OpenApi\Annotations\MediaType;
 use OpenApi\Annotations\Schema;
 
 /**
@@ -31,9 +33,12 @@ class Response extends AbstractDtoAnnotation
         return new \OpenApi\Annotations\Response([
             'response' => $this->code,
             'description' => $data,
-            'value' => [new Schema([
-                'type' => "object",
-                'value' => (new Property(['value' => $data]))->generateAnnotations()
+            'value' => [new MediaType([
+                'mediaType' => 'application/json',
+                'value' => [new Schema([
+                    'type' => "object",
+                    'value' => (new Property(['value' => $data]))->generateAnnotations()
+                ])]
             ])]
         ]);
     }
