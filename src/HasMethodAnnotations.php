@@ -4,8 +4,8 @@
 namespace AutoSwagger\SWG;
 
 
-use Swagger\Annotations\AbstractAnnotation;
-use Swagger\Annotations\Operation;
+use OpenApi\Annotations\AbstractAnnotation;
+use OpenApi\Annotations\Operation;
 
 interface HasMethodAnnotations
 {
