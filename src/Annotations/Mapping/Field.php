@@ -64,6 +64,11 @@ class Field
 
             if ($type) {
                 $this->type = $type->getName();
+                $this->required = !$type->allowsNull();
+                
+                if ($this->type === 'bool'){
+                    $this->type = 'boolean';
+                }
             } else {
                 $doc = $reflectionProperty->getDocComment();
                 $type = 'string';
