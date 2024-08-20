@@ -38,9 +38,8 @@ trait Method
 
             if (!($this->tags && is_array($this->tags))){
                 $this->tags = [];
+                $this->tags[] = $reflectionClass->getName();
             }
-
-            $this->tags[] = $reflectionClass->getName();
         }
 
         foreach ($annotations as $annotation) {
