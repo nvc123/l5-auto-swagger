@@ -35,7 +35,7 @@ class Property extends AbstractDtoAnnotation
         $preType = $data->type;
 
         /// TODO: поправить определение типа, добавить механизм описания таблиц и проверить пхпдок во всех все дтошках
-        if (in_array($preType, ['integer', 'file'])){
+        if (in_array($preType, ['integer', 'file', 'boolean'])){
             $type = $preType;
         }
 
